@@ -1,10 +1,3 @@
-<p>
-  env-list works
-  {{ environments.name }}
-</p>
-
-<ul class="heroes">
-  <li *ngFor="let env of environments" (click)="onSelect(env)">
-    <span class="badge">{{env.id}}</span> {{env.name}}
-  </li>
-</ul>
+<li *ngFor="let env of environments" (click)="onSelect(env)">
+  <span class="badge">{{env.id}}</span> {{env.name}}
+</li>
