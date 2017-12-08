@@ -20,8 +20,8 @@ export class EnvListComponent implements OnInit {
   }
 
   onSelect(env: Environment): void {
-    this.selectedEnv = env;
     this.environmentService.selectedEnvironment = env;
+    this.selectedEnv = env;
   }
 
   getEnvironments(): void {

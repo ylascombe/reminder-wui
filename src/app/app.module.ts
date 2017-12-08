@@ -7,6 +7,7 @@ import { EnvListComponent } from './env-list/env-list.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { EnvironmentService} from './environment.service';
 import { EnvironmentDetailComponent } from './environment-detail/environment-detail.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EnvironmentDetailComponent } from './environment-detail/environment-det
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    AppRoutingModule,
   ],
   providers: [
     EnvironmentService

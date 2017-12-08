@@ -1,5 +1,5 @@
 <ul class="navbar-nav mr-auto">
   <li *ngFor="let env of environments" (click)="onSelect(env)" class="nav-item">
-    <a class="nav-link" href="#">{{env.name}}</a>
+    <a class="nav-link" routerLink="/environment/{{env.name}}">{{env.name}}</a>
   </li>
 </ul>

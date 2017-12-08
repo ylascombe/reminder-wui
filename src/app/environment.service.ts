@@ -14,4 +14,8 @@ export class EnvironmentService {
   getEnvironments(): Observable<Environment[]> {
     return of(ENVIRONMENTS);
   }
+
+  getEnvironment(name: string): Observable<Environment> {
+    return of(ENVIRONMENTS[0]);
+  }
 }

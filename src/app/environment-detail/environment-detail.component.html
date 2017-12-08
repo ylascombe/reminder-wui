@@ -11,4 +11,9 @@
   <div *ngIf="! environment">
     <h1>AUCUN SELEC</h1>
   </div>
+
+  <div *ngIf="environmentService.selectedEnvironment">
+    <h1>Name: {{ environmentService.selectedEnvironment.name }}</h1>
+
+  </div>
 </div>
