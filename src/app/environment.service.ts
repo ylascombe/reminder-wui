@@ -7,6 +7,8 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class EnvironmentService {
 
+  selectedEnvironment: Environment;
+
   constructor() { }
 
   getEnvironments(): Observable<Environment[]> {

@@ -1,0 +1,14 @@
+<div class="row">
+  <br>
+  <br>
+  <p>
+    environment-detail works!
+  </p>
+
+  <div *ngIf="environment">
+    <h1>Name: {{ environment.name }}</h1>
+  </div>
+  <div *ngIf="! environment">
+    <h1>AUCUN SELEC</h1>
+  </div>
+</div>
