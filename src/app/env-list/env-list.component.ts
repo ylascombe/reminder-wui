@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Environment } from '../environment';
-import { ENVIRONMENTS } from '../mock-environments';
+import { EnvironmentService } from '../environment.service';
 
 @Component({
   selector: 'app-env-list',
@@ -9,17 +9,23 @@ import { ENVIRONMENTS } from '../mock-environments';
 })
 export class EnvListComponent implements OnInit {
 
-  environments = ENVIRONMENTS;
+  selectedEnv: Environment;
 
-  constructor() { }
+  environments: Environment[];
+
+  constructor(private environmentService: EnvironmentService) { }
 
   ngOnInit() {
+    this.getEnvironments();
   }
-
-  selectedEnv: Environment;
 
   onSelect(env: Environment): void {
     this.selectedEnv = env;
+  }
+
+  getEnvironments(): void {
+    this.environmentService.getEnvironments()
+      .subscribe(environments => this.environments = environments);
   }
 
 }

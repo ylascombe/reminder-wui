@@ -1,3 +1,5 @@
-<li *ngFor="let env of environments" (click)="onSelect(env)">
-  <span class="badge">{{env.id}}</span> {{env.name}}
-</li>
+<ul class="navbar-nav mr-auto">
+  <li *ngFor="let env of environments" (click)="onSelect(env)" class="nav-item">
+    <a class="nav-link" href="#">{{env.name}}</a>
+  </li>
+</ul>
