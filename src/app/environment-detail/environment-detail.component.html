@@ -16,4 +16,15 @@
     <h1>Name: {{ environmentService.selectedEnvironment.name }}</h1>
 
   </div>
+
+  <div *ngIf="environmentDetail">
+    <div class="row">
+      <div *ngFor="let url of environmentDetail.urls" class="col-xs-6 col-md-3 col-lg-2">
+        <a [href]="url.url" target="new">
+          <img [src]="url.image_url"><br></a>
+        <p>{{ url.desc}}</p>
+      </div>
+
+    </div>
+  </div>
 </div>

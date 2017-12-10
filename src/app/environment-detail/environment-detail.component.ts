@@ -4,6 +4,8 @@ import { Location } from '@angular/common';
 
 import { Environment } from '../environment';
 import { EnvironmentService } from '../environment.service';
+import {EnvironmentDetailService} from '../environment-detail.service';
+import {EnvironmentDetail} from '../environment-detail';
 
 @Component({
   selector: 'app-environment-detail',
@@ -14,23 +16,24 @@ import { EnvironmentService } from '../environment.service';
 export class EnvironmentDetailComponent implements OnInit {
 
   @Input() environment: Environment;
+  environmentDetail: EnvironmentDetail;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    public environmentService: EnvironmentService
+    public environmentService: EnvironmentService,
+    public environmentDetailService: EnvironmentDetailService
   ) { }
 
   ngOnInit() {
     this.environment = this.environmentService.selectedEnvironment;
-    // this.getEnvironment();
+    this.getEnvironmentDetail();
   }
 
-  getEnvironment() {
+  getEnvironmentDetail() {
     const name = this.route.snapshot.paramMap.get('name');
 
-    this.environmentService.getEnvironment(name)
-      // .subscribe(environment => this.environment = environment); // TODO uncomment this line
-      .subscribe(environment => this.environment = {'id': 1, 'name': name});
+    this.environmentDetailService.getEnvironmentDetail(name)
+      .subscribe(environmentDetail => this.environmentDetail = environmentDetail);
   }
 }

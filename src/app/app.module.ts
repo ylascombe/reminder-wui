@@ -8,6 +8,7 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { EnvironmentService} from './environment.service';
 import { EnvironmentDetailComponent } from './environment-detail/environment-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
+import {EnvironmentDetailService} from './environment-detail.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AppRoutingModule } from './/app-routing.module';
     AppRoutingModule,
   ],
   providers: [
-    EnvironmentService
+    EnvironmentService,
+    EnvironmentDetailService
   ],
   bootstrap: [AppComponent]
 })
