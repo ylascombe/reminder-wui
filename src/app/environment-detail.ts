@@ -1,7 +1,8 @@
-import {ReminderUrl} from './reminder-url';
+import {Stack} from './stack';
 
+// match 'reminder' item in api
 export class EnvironmentDetail {
   id: number;
   name: string;
-  urls: ReminderUrl[];
+  stacks: Stack[];
 }

@@ -9,13 +9,15 @@ import { EnvironmentService} from './environment.service';
 import { EnvironmentDetailComponent } from './environment-detail/environment-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
 import {EnvironmentDetailService} from './environment-detail.service';
+import { StackComponent } from './stack/stack.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EnvListComponent,
     AppNavbarComponent,
-    EnvironmentDetailComponent
+    EnvironmentDetailComponent,
+    StackComponent
   ],
   imports: [
     BrowserModule,
