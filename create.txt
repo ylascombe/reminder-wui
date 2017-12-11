@@ -1,0 +1,2 @@
+curl -XPOST http://localhost:8000/projects/ -d '{"name": "myproject"}' -H 'Content-Type: application/json'
+curl -XPOST http://localhost:8000/environments/ -d '{"project": 1, "name": "INTEGRATION"}' -H 'Content-Type: application/json'

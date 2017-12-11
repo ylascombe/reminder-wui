@@ -26,7 +26,7 @@ export const ENVIRONMENTS_DETAILS: EnvironmentDetail[] = [
       {
         id: 2,
         name: 'Elasticsearch',
-        logo: 'assets/kibana.svg',
+        logo: 'assets/elasticsearch.svg',
         desc: 'Stack ELK pour exploiter les logs de la plateforme.',
         sections: [
           {
