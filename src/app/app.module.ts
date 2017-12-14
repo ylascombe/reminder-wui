@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { EnvListComponent } from './env-list/env-list.component';
@@ -17,12 +18,13 @@ import { StackComponent } from './stack/stack.component';
     EnvListComponent,
     AppNavbarComponent,
     EnvironmentDetailComponent,
-    StackComponent
+    StackComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     EnvironmentService,

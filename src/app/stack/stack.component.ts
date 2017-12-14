@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Stack} from '../stack';
-import {StackSection} from '../stack-section';
-import {StackSectionName} from '../stack-section-names';
 
 @Component({
   selector: 'app-stack',
@@ -15,14 +13,6 @@ export class StackComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-    for (const section of this.stack.sections) {
-      console.log(section);
-
-      for (const url of section.urls) {
-        console.log(url);
-      }
-    }
   }
 
 }

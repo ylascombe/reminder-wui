@@ -1,19 +1,17 @@
 <div *ngIf="stack">
   <h4>
-    <img [src]="stack.logo" width="100%" height="120em"><br>{{stack.name}}
+    <img [src]="'assets/' + stack.name + '.png'" width="100%" height="120em"><br>{{stack.name}}
   </h4>
   <p>{{stack.desc}}</p>
 
-  <div *ngFor="let section of stack.sections">
 
-    <div *ngFor="let url of section.urls">
-      <a [href]="url.name" target="new" >
-        {{url.name}}</a>
-    </div>
-
-    <ul *ngFor="let host of section.hosts">
-      <li>{{host.name}}</li>
-    </ul>
-
+  <div *ngFor="let url of stack.urls">
+    <a [href]="url.url" target="new" >
+      {{url.url}}</a>
   </div>
+
+  <ul *ngFor="let host of stack.hostnames">
+    <li>{{host.hostname}}</li>
+  </ul>
+
 </div>

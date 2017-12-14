@@ -1,9 +1,11 @@
-import {StackSection} from './stack-section';
+import {StackUrl} from './stack-url';
+import {StackHostname} from './stack-hostname';
 
 export class Stack {
   id: number;
   name: string;
   logo: string;
   desc: string;
-  sections: StackSection[];
+  urls: StackUrl[];
+  hostnames: StackHostname[];
 }
