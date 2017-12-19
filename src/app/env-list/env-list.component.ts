@@ -9,8 +9,6 @@ import { EnvironmentService } from '../environment.service';
 })
 export class EnvListComponent implements OnInit {
 
-  selectedEnv: Environment;
-
   environments: Environment[];
 
   constructor(private environmentService: EnvironmentService) { }
@@ -21,7 +19,6 @@ export class EnvListComponent implements OnInit {
 
   onSelect(env: Environment): void {
     this.environmentService.selectedEnvironment = env;
-    this.selectedEnv = env;
   }
 
   getEnvironments(): void {

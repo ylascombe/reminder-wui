@@ -31,9 +31,11 @@ export class EnvironmentDetailComponent implements OnInit {
   }
 
   getEnvironmentDetail() {
-    const name = this.route.snapshot.paramMap.get('name');
+    const id = +this.route.snapshot.paramMap.get('id');
+    console.log(id);
+    // console.log(this.environmentService.selectedEnvironment);
 
-    this.environmentDetailService.getEnvironmentDetail(name)
+    this.environmentDetailService.getEnvironmentDetail(id)
       .subscribe(apiResult => this.environmentDetail = apiResult.reminder);
   }
 }

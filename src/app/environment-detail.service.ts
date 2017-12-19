@@ -11,9 +11,9 @@ export class EnvironmentDetailService {
     private http: HttpClient
   ) { }
 
-  getEnvironmentDetail(name: string): Observable<ApiReminder> {
+  getEnvironmentDetail(id: number): Observable<ApiReminder> {
     // return of(API_REMINDER);
-    const url = 'http://127.0.0.1:8000/environments/1/';
+    const url = 'http://127.0.0.1:8000/environments/' + id + '/';
     return this.http.get<ApiReminder>(url);
 
     // return this.http.get<EnvironmentDetail>(url).pipe(
