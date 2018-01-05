@@ -6,6 +6,7 @@ export class Stack {
   name: string;
   logo: string;
   desc: string;
+  category: string;
   urls: StackUrl[];
   hostnames: StackHostname[];
 }

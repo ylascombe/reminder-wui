@@ -11,6 +11,7 @@ import { EnvironmentDetailComponent } from './environment-detail/environment-det
 import { AppRoutingModule } from './/app-routing.module';
 import {EnvironmentDetailService} from './environment-detail.service';
 import { StackComponent } from './stack/stack.component';
+import {GroupByPipe} from './group-by-pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { StackComponent } from './stack/stack.component';
     AppNavbarComponent,
     EnvironmentDetailComponent,
     StackComponent,
+    GroupByPipe,
   ],
   imports: [
     BrowserModule,
